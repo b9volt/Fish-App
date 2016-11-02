@@ -3,19 +3,35 @@ class TripsController < ApplicationController
 
   def index
     trips = Trip.all
+    render json: {status: 200, trip: trips}
+  end
+
+  def show
+    trip = Trip.find(params[:id])
     render json: {status: 200, trips: trips}
   end
 
   def create
-  end
-
-  def show
+    trip = Trip.new(trip_params)
+    if trip.save
+      render json: {status: 200, trip: trip}
+    else
+      render json: {status: 400, trip: trip}
+    end
   end
 
   def update
+    trip = Trip.find(params[:id])
+    trip.update(trip_params)
+
+    render json: {status: 200, trip: trip}
   end
 
   def destroy
+    trip = Trip.find(params[:id])
+    trip.destroy
+
+    render json: {status: 204}
   end
 
   private
@@ -30,4 +46,5 @@ class TripsController < ApplicationController
       :summary,
       :weather
       )
+    end
 end
