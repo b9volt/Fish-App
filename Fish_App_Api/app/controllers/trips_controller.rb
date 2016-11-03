@@ -13,10 +13,11 @@ class TripsController < ApplicationController
 
   def create
     trip = Trip.new(trip_params)
+    
     if trip.save
       render json: {status: 200, trip: trip}
     else
-      render json: {status: 400, trip: trip}
+      render :json => { :errors =>@model.errors.full_messages }
     end
   end
 
