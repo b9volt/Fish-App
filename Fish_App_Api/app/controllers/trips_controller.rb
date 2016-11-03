@@ -11,13 +11,25 @@ class TripsController < ApplicationController
     render json: {status: 200, trip: trip}
   end
 
+  # def create
+  #   trip = Trip.new(trip_params)
+  #
+  #   if trip.save
+  #     render json: {status: 200, trip: trip}
+  #   else
+  #     puts $!
+  #   end
+  # end
+
   def create
+    user = User.find(params[:user_id])
     trip = Trip.new(trip_params)
-    
+    puts params.inspect
+    puts trip_params.inspect
     if trip.save
       render json: {status: 200, trip: trip}
     else
-      render :json => { :errors =>@model.errors.full_messages }
+      render json: {status: 400, trip: trip}
     end
   end
 
@@ -38,6 +50,7 @@ class TripsController < ApplicationController
   private
     def trip_params
       params.required(:trip).permit(
+      :user_id,
       :location,
       :num_of_fish,
       :clientsHappy,
