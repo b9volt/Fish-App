@@ -8,7 +8,7 @@ class TripsController < ApplicationController
 
   def show
     trip = Trip.find(params[:id])
-    render json: {status: 200, trips: trips}
+    render json: {status: 200, trip: trip}
   end
 
   def create
