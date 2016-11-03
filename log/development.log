@@ -168,3 +168,75 @@ Completed 200 OK in 521ms (Views: 0.2ms | ActiveRecord: 63.0ms)
   [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 11], ["clientsHappy", true], ["end", 2015-12-19 00:00:00 UTC], ["rating", 2], ["start", 2015-12-05 00:00:00 UTC], ["summary", "You can't overr"], ["user_id", 1], ["weather", "debitis quaerat doloribus"], ["created_at", 2016-11-03 17:27:19 UTC], ["updated_at", 2016-11-03 17:27:19 UTC]]
   [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mTrip Load (1.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[36mTrip Load (1.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (14.5ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 5], ["clientsHappy", true], ["end", 2016-09-15 00:00:00 UTC], ["rating", 3], ["start", 2016-09-15 00:00:00 UTC], ["summary", "The COM firewall is down, navigate the back-end hard drive so we can program the SMTP panel!"], ["user_id", 1], ["weather", "doloremque illum quasi"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 15], ["clientsHappy", true], ["end", 2016-09-23 00:00:00 UTC], ["rating", 2], ["start", 2016-09-23 00:00:00 UTC], ["summary", "The EXE feed is down, back up the 1080p matrix so we can generate the FTP system!"], ["user_id", 1], ["weather", "eos error et"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 19], ["clientsHappy", true], ["end", 2016-09-25 00:00:00 UTC], ["rating", 4], ["start", 2016-09-25 00:00:00 UTC], ["summary", "Try to back up the JBOD pixel, maybe it will program the haptic sensor!"], ["user_id", 1], ["weather", "deserunt velit et"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 18], ["clientsHappy", false], ["end", 2016-09-30 00:00:00 UTC], ["rating", 0], ["start", 2016-09-30 00:00:00 UTC], ["summary", "programming the protocol won\"t do anything, we need to hack the open-source SAS microchip!"], ["user_id", 1], ["weather", "facere sit voluptas"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 18], ["clientsHappy", true], ["end", 2016-10-01 00:00:00 UTC], ["rating", 2], ["start", 2016-10-01 00:00:00 UTC], ["summary", "You can't overr"], ["user_id", 1], ["weather", "reiciendis nam vel"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 22], ["clientsHappy", false], ["end", 2016-10-02 00:00:00 UTC], ["rating", 3], ["start", 2016-10-02 00:00:00 UTC], ["summary", "Try to overr"], ["user_id", 1], ["weather", "necessitatibus inc"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 7], ["clientsHappy", true], ["end", 2016-10-03 00:00:00 UTC], ["rating", 3], ["start", 2016-10-03 00:00:00 UTC], ["summary", "Try to navigate the RSS matrix, maybe it will parse the online hard drive!"], ["user_id", 1], ["weather", "necessitatibus inc"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 23], ["clientsHappy", false], ["end", 2016-10-04 00:00:00 UTC], ["rating", 5], ["start", 2016-10-04 00:00:00 UTC], ["summary", "We need to navigate the virtual FTP bandw"], ["user_id", 1], ["weather", "quas recusandae cumque"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 13], ["clientsHappy", false], ["end", 2016-10-05 00:00:00 UTC], ["rating", 5], ["start", 2016-10-05 00:00:00 UTC], ["summary", "ll program the primary USB microchip, that should driver the ADP circuit!"], ["user_id", 1], ["weather", "ipsum voluptatem voluptatem"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["num_of_fish", 11], ["clientsHappy", true], ["end", 2016-10-15 00:00:00 UTC], ["rating", 2], ["start", 2016-10-15 00:00:00 UTC], ["summary", "You can't overr"], ["user_id", 1], ["weather", "debitis quaerat doloribus"], ["created_at", 2016-11-03 18:06:20 UTC], ["updated_at", 2016-11-03 18:06:20 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTrip Load (1.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips"[0m
