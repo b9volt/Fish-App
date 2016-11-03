@@ -2,7 +2,7 @@ class TripsController < ApplicationController
   before_action :authenticate
 
   def index
-    trips = Trip.all
+    trips = Trip.where(user_id: params[:user_id])
     render json: {status: 200, trip: trips}
   end
 
