@@ -21,13 +21,14 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'rack-cors'
 gem 'jwt'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.1'
+gem 'faker'
 
 
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug', platform: :mri
-  gem 'faker'
+  # gem 'byebug', platform: :mri
+  gem 'pry-rails'
 end
 
 group :development do
