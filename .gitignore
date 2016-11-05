@@ -1,4 +1,4 @@
-*.env
-*.DS_Store
-*.log
-*.pid
+**/*.env
+**/*.DS_Store
+**/*.log
+**/*.pid
