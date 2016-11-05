@@ -2997,3 +2997,1333 @@ Processing by TripsController#index as HTML
 Completed 200 OK in 13ms (Views: 11.3ms | ActiveRecord: 0.7ms)
 
 
+Started POST "/users/login" for ::1 at 2016-11-05 10:15:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (35.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (38.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 235ms (Views: 0.5ms | ActiveRecord: 108.3ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:15:58 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (46.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 129ms (Views: 13.1ms | ActiveRecord: 50.1ms)
+
+
+Started PATCH "//users/1/trips/13" for ::1 at 2016-11-05 10:16:26 -0500
+Processing by TripsController#update as HTML
+  Parameters: {"trip"=>{"location"=>"San Jose", "num_of_fish"=>"20", "clientsHappy"=>true, "rating"=>4, "summary"=>"Try to back up the JBOD pixel, maybe it will program the haptic sensor!", "start"=>"2016-09-25T00:00:00.000Z", "end"=>"2016-09-25T00:00:00.000Z", "weather"=>"deserunt velit et", "user_id"=>1}, "user_id"=>"1", "id"=>"13"}
+  [1m[36mTrip Load (12.2ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (8.7ms)[0m  [1m[33mUPDATE "trips" SET "location" = $1, "num_of_fish" = $2, "updated_at" = $3 WHERE "trips"."id" = $4[0m  [["location", "San Jose"], ["num_of_fish", 20], ["updated_at", 2016-11-05 15:16:26 UTC], ["id", 13]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 63ms (Views: 0.6ms | ActiveRecord: 22.0ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:16:26 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:16:26 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 17ms (Views: 15.2ms | ActiveRecord: 0.9ms)
+
+
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."location" = $1[0m  [["location", "San Jose"]]
+Started POST "/users/login" for ::1 at 2016-11-05 10:32:21 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 0.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:32:21 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (1.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 17ms (Views: 14.0ms | ActiveRecord: 1.9ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:32:46 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 10:35:22 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:35:23 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 10:36:44 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:36:44 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 16ms (Views: 14.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 10:37:51 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:37:51 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:38:01 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 10:44:25 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 72ms (Views: 0.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 10:44:25 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 10:45:02 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 10:45:02 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 10:45:23 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 71ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:45:23 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 34ms (Views: 32.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 10:45:33 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/0/trips" for ::1 at 2016-11-05 12:54:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (24.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"0"}
+  [1m[36mTrip Load (16.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 0]]
+Completed 200 OK in 89ms (Views: 14.8ms | ActiveRecord: 44.5ms)
+
+
+Started GET "//users/0/trips" for ::1 at 2016-11-05 12:54:42 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"0"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 1ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 12:56:18 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (78.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 435ms (Views: 0.4ms | ActiveRecord: 212.6ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 12:56:18 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.2ms | ActiveRecord: 0.7ms)
+
+
+Started POST "//users/5/trips" for ::1 at 2016-11-05 12:57:07 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"trip"=>{"location"=>"Spain", "num_of_fish"=>"3", "clientsHappy"=>true, "rating"=>5, "summary"=>"I love Andalucia", "start"=>"2016-01-01", "end"=>"2016-01-01", "weather"=>"sunny", "user_id"=>5}, "user_id"=>"5"}
+  [1m[36mUser Load (47.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (10.8ms)[0m  [1m[32mINSERT INTO "trips" ("location", "num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["location", "Spain"], ["num_of_fish", 3], ["clientsHappy", true], ["end", 2016-01-01 00:00:00 UTC], ["rating", 5], ["start", 2016-01-01 00:00:00 UTC], ["summary", "I love Andalucia"], ["user_id", 5], ["weather", "sunny"], ["created_at", 2016-11-05 17:57:07 UTC], ["updated_at", 2016-11-05 17:57:07 UTC]]
+  [1m[35m (22.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 144ms (Views: 0.5ms | ActiveRecord: 83.4ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 12:57:07 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 12:59:55 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 12:59:55 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "//users/0/trips" for ::1 at 2016-11-05 13:00:10 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"0"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 0]]
+Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:00:25 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:00:25 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:01:07 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:01:07 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:02:08 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:02:09 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:05:03 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:05:03 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:05:51 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:08:10 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:08:10 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:08:53 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:08:53 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:09:15 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/0/trips" for ::1 at 2016-11-05 13:10:04 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"0"}
+  [1m[36mTrip Load (2.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 0]]
+Completed 200 OK in 5ms (Views: 1.3ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:13:40 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:13:40 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:13:49 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+Filter chain halted as :authenticate rendered or redirected
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:20:40 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:20:40 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 6ms (Views: 2.5ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:24:34 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:24:34 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.0ms | ActiveRecord: 1.5ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:25:29 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:29:28 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:29:28 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:30:54 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:30:54 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (3.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 2.8ms | ActiveRecord: 3.4ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:43:04 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:43:04 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:45:04 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:45:04 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:45:47 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:45:47 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 5ms (Views: 3.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:46:05 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:46:27 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:46:27 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (2.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 2.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:46:53 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:46:53 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:49:44 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:49:44 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "//users/0/trips" for ::1 at 2016-11-05 13:49:57 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"0"}
+  [1m[36mTrip Load (1.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 0]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 1.5ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 13:50:15 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:50:15 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 13:50:54 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:07:16 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:07:16 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (2.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 3.7ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:10:15 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:10:15 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:10:27 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:14:02 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:14:02 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (3.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 3.4ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:14:14 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:15:23 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:15:23 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:16:04 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:17:18 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:17:18 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:17:35 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:19:59 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:19:59 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:20:17 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 14:20:17 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (2.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:20:32 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 14:20:32 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/0/trips" for ::1 at 2016-11-05 14:21:50 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"0"}
+  [1m[36mTrip Load (1.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 0]]
+Completed 200 OK in 5ms (Views: 2.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:21:56 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 14:21:56 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (1.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 1.2ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:23:50 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:23:50 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:25:40 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:25:40 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (2.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 3.4ms | ActiveRecord: 2.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:28:10 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:28:10 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:30:08 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:30:08 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 6ms (Views: 2.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:30:32 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:45:05 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:45:06 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (2.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 3.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:45:17 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "//users/5/trips" for ::1 at 2016-11-05 14:46:13 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"trip"=>{"location"=>"Mosquito Bay", "num_of_fish"=>"1", "rating"=>-2, "summary"=>"Too many mosquitoes!", "start"=>"2016-08-01", "end"=>"2016-08-01", "weather"=>"cloudy", "user_id"=>5}, "user_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("location", "num_of_fish", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["location", "Mosquito Bay"], ["num_of_fish", 1], ["end", 2016-08-01 00:00:00 UTC], ["rating", -2], ["start", 2016-08-01 00:00:00 UTC], ["summary", "Too many mosquitoes!"], ["user_id", 5], ["weather", "cloudy"], ["created_at", 2016-11-05 19:46:13 UTC], ["updated_at", 2016-11-05 19:46:13 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.9ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:46:13 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:46:21 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:47:01 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:47:01 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:48:13 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:48:13 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:48:56 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:49:04 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 1.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 14:49:13 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:52:43 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 14:52:43 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (1.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 1.8ms)
+
+
+Started PATCH "//users/1/trips/14" for ::1 at 2016-11-05 14:53:23 -0500
+Processing by TripsController#update as HTML
+  Parameters: {"trip"=>{"location"=>"Mosquito Bay", "num_of_fish"=>18, "clientsHappy"=>false, "rating"=>0, "summary"=>"programming the protocol won\"t do anything, we need to hack the open-source SAS microchip!", "start"=>"2016-09-30T00:00:00.000Z", "end"=>"2016-09-30T00:00:00.000Z", "weather"=>"facere sit voluptas", "user_id"=>1}, "user_id"=>"1", "id"=>"14"}
+  [1m[36mTrip Load (0.3ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = $1 LIMIT $2[0m  [["id", 14], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "trips" SET "location" = $1, "updated_at" = $2 WHERE "trips"."id" = $3[0m  [["location", "Mosquito Bay"], ["updated_at", 2016-11-05 19:53:23 UTC], ["id", 14]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 14:53:23 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 14:53:23 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 14:55:28 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"bob", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "bob"], ["LIMIT", 1]]
+Completed 200 OK in 68ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 14:55:28 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/1/trips" for ::1 at 2016-11-05 14:58:52 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mTrip Load (1.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 1]]
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 15:03:51 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 69ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 15:03:51 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 15:04:01 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms)
+
+
+Started POST "//users/5/trips" for ::1 at 2016-11-05 15:05:01 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"trip"=>{"location"=>"Big Bass Bay", "num_of_fish"=>"20", "clientsHappy"=>true, "rating"=>5, "summary"=>"Good bass fishing!", "start"=>"2016-02-01", "end"=>"2016-02-01", "weather"=>"just right", "user_id"=>5}, "user_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("location", "num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["location", "Big Bass Bay"], ["num_of_fish", 20], ["clientsHappy", true], ["end", 2016-02-01 00:00:00 UTC], ["rating", 5], ["start", 2016-02-01 00:00:00 UTC], ["summary", "Good bass fishing!"], ["user_id", 5], ["weather", "just right"], ["created_at", 2016-11-05 20:05:01 UTC], ["updated_at", 2016-11-05 20:05:01 UTC]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 7ms (Views: 0.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 15:05:01 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 15:05:09 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:03:25 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (35.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (30.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 225ms (Views: 0.5ms | ActiveRecord: 86.0ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:03:26 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (9.1ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 58ms (Views: 11.3ms | ActiveRecord: 13.5ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:03:45 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:05:31 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 0.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:05:32 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:07:46 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 74ms (Views: 0.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:07:46 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:08:04 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 1.6ms)
+
+
+Started POST "//users/5/trips" for ::1 at 2016-11-05 17:09:29 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"trip"=>{"location"=>"Boggy Creek", "num_of_fish"=>"12", "clientsHappy"=>false, "rating"=>2, "summary"=>"Too boggy!", "start"=>"2016-02-01", "end"=>"2016-02-01", "weather"=>"sunny", "user_id"=>5}, "user_id"=>"5"}
+  [1m[36mUser Load (44.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (10.5ms)[0m  [1m[32mINSERT INTO "trips" ("location", "num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["location", "Boggy Creek"], ["num_of_fish", 12], ["clientsHappy", false], ["end", 2016-02-01 00:00:00 UTC], ["rating", 2], ["start", 2016-02-01 00:00:00 UTC], ["summary", "Too boggy!"], ["user_id", 5], ["weather", "sunny"], ["created_at", 2016-11-05 22:09:29 UTC], ["updated_at", 2016-11-05 22:09:29 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 96ms (Views: 0.7ms | ActiveRecord: 55.8ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:09:29 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 9ms (Views: 6.0ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:11:33 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 80ms (Views: 0.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:11:33 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (3.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 10ms (Views: 4.8ms | ActiveRecord: 3.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:13:24 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:13:48 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:13:48 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 10ms (Views: 4.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:14:25 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 9ms (Views: 7.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "//users/5/trips" for ::1 at 2016-11-05 17:15:33 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"trip"=>{"location"=>"Bass Island", "num_of_fish"=>"50", "clientsHappy"=>true, "rating"=>12, "summary"=>"Nice bass fishing.", "start"=>"2016-03-02", "end"=>"2016-03-02", "weather"=>"sunny", "user_id"=>5}, "user_id"=>"5"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "trips" ("location", "num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["location", "Bass Island"], ["num_of_fish", 50], ["clientsHappy", true], ["end", 2016-03-02 00:00:00 UTC], ["rating", 12], ["start", 2016-03-02 00:00:00 UTC], ["summary", "Nice bass fishing."], ["user_id", 5], ["weather", "sunny"], ["created_at", 2016-11-05 22:15:33 UTC], ["updated_at", 2016-11-05 22:15:33 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 11ms (Views: 0.8ms | ActiveRecord: 2.5ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:15:33 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.5ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:15:46 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 15ms (Views: 13.0ms | ActiveRecord: 1.3ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:17:03 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 77ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:17:04 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:17:34 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 0.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:17:35 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 10ms (Views: 8.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:18:50 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 0.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:18:50 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (3.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 14ms (Views: 9.2ms | ActiveRecord: 3.6ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:19:09 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 0.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:19:09 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:19:25 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:19:43 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.8ms)
+
+
+Started DELETE "//users/5/trips/38" for ::1 at 2016-11-05 17:19:51 -0500
+Processing by TripsController#destroy as HTML
+  Parameters: {"user_id"=>"5", "id"=>"38"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = $1 LIMIT $2[0m  [["id", 38], ["LIMIT", 1]]
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 38]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 9ms (Views: 0.3ms | ActiveRecord: 2.9ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:19:51 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (2.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 9ms (Views: 5.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:19:51 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:20:11 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 13ms (Views: 11.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:21:38 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:21:39 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 1.6ms)
+
+
+Started POST "//users/5/trips" for ::1 at 2016-11-05 17:22:26 -0500
+Processing by TripsController#create as HTML
+  Parameters: {"trip"=>{"location"=>"Bass Island", "num_of_fish"=>"120", "clientsHappy"=>true, "rating"=>5, "summary"=>"Nice weather", "start"=>"2016-02-01", "end"=>"2016-02-01", "weather"=>"Chilly", "user_id"=>5}, "user_id"=>"5"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO "trips" ("location", "num_of_fish", "clientsHappy", "end", "rating", "start", "summary", "user_id", "weather", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["location", "Bass Island"], ["num_of_fish", 120], ["clientsHappy", true], ["end", 2016-02-01 00:00:00 UTC], ["rating", 5], ["start", 2016-02-01 00:00:00 UTC], ["summary", "Nice weather"], ["user_id", 5], ["weather", "Chilly"], ["created_at", 2016-11-05 22:22:26 UTC], ["updated_at", 2016-11-05 22:22:26 UTC]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 11ms (Views: 0.6ms | ActiveRecord: 3.0ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:22:27 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:22:37 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (2.3ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 23ms (Views: 6.2ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:26:41 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 76ms (Views: 0.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:26:42 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (1.2ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "//users/0/trips" for ::1 at 2016-11-05 17:26:47 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"0"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 0]]
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:26:54 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 78ms (Views: 0.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:26:54 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (13.0ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 20ms (Views: 6.3ms | ActiveRecord: 13.0ms)
+
+
+Started GET "//users/0/trips" for ::1 at 2016-11-05 17:27:16 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"0"}
+  [1m[36mTrip Load (0.8ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 0]]
+Completed 200 OK in 3ms (Views: 1.1ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/users/login" for ::1 at 2016-11-05 17:27:24 -0500
+Processing by UsersController#login as HTML
+  Parameters: {"user"=>{"username"=>"zach", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "zach"], ["LIMIT", 1]]
+Completed 200 OK in 75ms (Views: 0.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:27:24 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.9ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.9ms)
+
+
+Started DELETE "//users/5/trips/39" for ::1 at 2016-11-05 17:27:43 -0500
+Processing by TripsController#destroy as HTML
+  Parameters: {"user_id"=>"5", "id"=>"39"}
+  [1m[36mTrip Load (1.1ms)[0m  [1m[34mSELECT  "trips".* FROM "trips" WHERE "trips"."id" = $1 LIMIT $2[0m  [["id", 39], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[31mDELETE FROM "trips" WHERE "trips"."id" = $1[0m  [["id", 39]]
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 200 OK in 8ms (Views: 0.2ms | ActiveRecord: 5.1ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:27:43 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (2.4ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:27:43 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.7ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "//users/5/trips" for ::1 at 2016-11-05 17:27:49 -0500
+Processing by TripsController#index as HTML
+  Parameters: {"user_id"=>"5"}
+  [1m[36mTrip Load (0.6ms)[0m  [1m[34mSELECT "trips".* FROM "trips" WHERE "trips"."user_id" = $1[0m  [["user_id", 5]]
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.6ms)
+
+
