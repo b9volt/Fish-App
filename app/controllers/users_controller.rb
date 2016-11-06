@@ -11,7 +11,10 @@ class UsersController < ApplicationController
   end
 
   def login
+    puts params.inspect
     user = User.find_by(username: params[:user][:username])
+    puts 'after getting the user'
+    puts 'user is' + user.inspect
     if user && user.authenticate(params[:user][:password])
       token = token(user.id, user.username)
       render json: {status: 201, token: token, user: user}
@@ -21,7 +24,7 @@ class UsersController < ApplicationController
   end
 
   private
-  def token(id, username)
+    def token(id, username)
       JWT.encode(payload(id, username), ENV['JWT_SECRET'], 'HS256')
     end
 
