@@ -1,24 +1,28 @@
-# README
+## Fish-App-API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[Click here for Fish-App-API on Heroku](https://radiant-scrubland-61785.herokuapp.com/)
 
-Things you may want to cover:
+[Docs (user stories, wireframes)](https://drive.google.com/drive/folders/0B8cp2PH4jV85RFlJbUFBNkt3RGs)
 
-* Ruby version
+### Description
 
-* System dependencies
+Fish-App-API is the back end for a lightweight, business intelligence application for commercial fisherman. Users can create accounts, enter in information about fishing trips they want to keep up with, and track customer happiness.
 
-* Configuration
+###### Features
+* User authentication
+* CRUD features to create, update, and delete content
 
-* Database creation
+###### Business Problem Solved
+Keeping up with relevant business data.
 
-* Database initialization
+### Technologies Used
 
-* How to run the test suite
+* Ruby on Rails used to serve the data
+* PostgreSQL for database
 
-* Services (job queues, cache servers, search engines, etc.)
+###### APIs
+* None
 
-* Deployment instructions
-
-* ...
+### Future Implementations
+* Let the user choose what data to chart and what chart to display.
+* Better user notifications.
